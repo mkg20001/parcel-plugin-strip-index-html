@@ -1,6 +1,6 @@
 {
   "name": "parcel-plugin-strip-index-html",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Strips /index.html from URLs in parcel builds",
   "main": "src/parcel.js",
   "bin": {
