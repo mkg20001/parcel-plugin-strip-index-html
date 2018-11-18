@@ -1,0 +1,29 @@
+{
+  "name": "parcel-plugin-strip-index-html",
+  "version": "0.0.1",
+  "description": "Strips /index.html from URLs in parcel builds",
+  "main": "src/parcel.js",
+  "bin": {
+    "parcel-plugin-strip-index-html": "./src/bin.js",
+    "strip-index-html": "./src/bin.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "parcel",
+    "parcel-plugin",
+    "index-html",
+    "index-html-strip"
+  ],
+  "author": "Maciej Krüger <mkg20001@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkg20001/parcel-plugin-strip-index-html.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mkg20001/parcel-plugin-strip-index-html/issues"
+  },
+  "homepage": "https://github.com/mkg20001/parcel-plugin-strip-index-html#readme"
+}
