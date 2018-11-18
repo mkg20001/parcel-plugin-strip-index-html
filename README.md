@@ -2,23 +2,13 @@
 
 Strips /index.html from URLs in parcel builds
 
-<table>
-  <tr>
-    <td>
 ```html
 <a href="/my-page/index.html">
 ```
-    </td>
-    <td>
-      =>
-    </td>
-    <td>
+=>
 ```html
 <a href="/my-page/">
 ```
-    </td>
-  </tr>
-</table>
 
 ## Usage
 
