@@ -3,9 +3,9 @@
 const iterate = require('.')
 
 module.exports = bundler => {
-  const { outDir } = bundler.options
+  const { outDir, hmr } = bundler.options
 
   bundler.on('bundled', bundle => {
-    iterate(outDir)
+    if (!hmr) { iterate(outDir) }
   })
 }

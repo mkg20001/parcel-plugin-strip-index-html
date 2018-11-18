@@ -10,6 +10,8 @@ Strips /index.html from URLs in parcel builds
 <a href="/my-page/">
 ```
 
+**NOTE: Automatic stripping is only done when HMR is disabled (aka when building for production)**
+
 ## Usage
 
 ### parcel
