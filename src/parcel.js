@@ -4,7 +4,7 @@ const iterate = require('.')
 
 module.exports = bundler => {
   if (bundler.addAssetMiddleware) {
-    bundle.addAssetMiddleware(require.resolve('./HtmlMiddleware'))
+    bundler.addAssetMiddleware('html', require.resolve('./HtmlMiddleware'))
   } else {
     const { outDir, hmr } = bundler.options
 
