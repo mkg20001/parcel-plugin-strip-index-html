@@ -3,9 +3,13 @@
 const iterate = require('.')
 
 module.exports = bundler => {
-  const { outDir, hmr } = bundler.options
+  if (bundler.addAssetMiddleware) {
+    bundle.addAssetMiddleware(require.resolve('./HtmlMiddleware'))
+  } else {
+    const { outDir, hmr } = bundler.options
 
-  bundler.on('bundled', bundle => {
-    if (!hmr) { iterate(outDir) }
-  })
+    bundler.on('bundled', bundle => {
+      if (!hmr) { iterate(outDir) }
+    })
+  }
 }

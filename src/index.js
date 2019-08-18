@@ -3,10 +3,16 @@
 const fs = require('fs')
 const path = require('path')
 
+function _strip (content) {
+  content = content.replace(/\/?index.html/gmi, '/')
+
+  return content
+}
+
 function strip (path) {
   console.log('Striping /index.html in %s...', JSON.stringify(path))
   let content = String(fs.readFileSync(path))
-  content = content.replace(/\/index.html/gmi, '/')
+  content = _strip(content)
   fs.writeFileSync(path, content)
 }
 
@@ -24,3 +30,4 @@ function iterate (folder) {
 module.exports = iterate
 module.exports.iterate = iterate
 module.exports.strip = strip
+module.exports._strip = _strip
