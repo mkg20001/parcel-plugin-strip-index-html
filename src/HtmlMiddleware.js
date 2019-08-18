@@ -5,7 +5,9 @@ const { _strip } = require('.')
 
 class HtmlMiddleware extends Middleware {
   async postGenerate () {
-    this.asset.contents = _strip(this.asset.contents)
+    if (this.asset.options.production) {
+      this.asset.contents = _strip(this.asset.contents)
+    }
   }
 }
 
